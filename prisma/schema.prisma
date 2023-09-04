@@ -6,18 +6,12 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "postgresql"
     // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
     // Further reading:
     // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
     // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
     url      = env("DATABASE_URL")
-}
-
-model Example {
-    id        String   @id @default(cuid())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
 }
 
 // Necessary for Next auth
@@ -55,6 +49,10 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    tweets        Tweet[]
+    likes          Like[]
+    followers User[] @relation(name: "Followers")
+    follows  User[] @relation(name: "Followers")
 }
 
 model VerificationToken {
@@ -63,4 +61,23 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Tweet {
+    id        String   @id @default(cuid())
+    userId    String
+    content   String
+    createdAt DateTime @default(now())
+    user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+    likes      Like[]
+    @@unique([createdAt, id])
+}
+
+model Like {
+    userId  String
+    tweetId String
+    user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+    Tweet   Tweet  @relation(fields: [tweetId], references: [id], onDelete: Cascade)
+
+    @@id([userId, tweetId])
 }

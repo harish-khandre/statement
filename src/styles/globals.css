@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button {
+  @apply mx-8 rounded-3xl  bg-sky-400 py-2 text-center text-lg font-medium tracking-wide text-sky-50 shadow-md shadow-orange-950 transition duration-500 hover:bg-sky-500 hover:shadow-sm hover:shadow-sky-950
+  active:shadow-inner
+}
