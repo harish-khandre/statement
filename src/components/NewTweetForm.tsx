@@ -72,9 +72,8 @@ const Form = () => {
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
-    
-      createTweet.mutate({ content: inputValue });
-    
+
+    createTweet.mutate({ content: inputValue });
   }
   const session = useSession();
 
@@ -82,22 +81,22 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col gap-2 border-b px-4  py-2 "
+      className="flex flex-col gap-2 border-b px-4  py-2 rounded-full "
     >
       <div className="flex gap-4">
-        <ProfileImage src={session.data.user.image} />
+        <ProfileImage className="my-4" src={session.data.user.image} />
         <textarea
           minLength={1}
           style={{ height: 0 }}
           ref={inputRef}
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}
-          className="flex-grow resize-none overflow-hidden p-4 text-lg outline-0"
+          className="flex-grow resize-none overflow-hidden rounded-full bg-zinc-500 p-4 text-lg text-white outline-0 my-2 "
           placeholder="what's on your mind?"
           required
         />
       </div>
-      <button className="button self-end px-8">Submit</button>
+      <button className="button self-end px-8 mb-2">Submit</button>
     </form>
   );
 };

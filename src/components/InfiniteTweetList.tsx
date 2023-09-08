@@ -111,25 +111,25 @@ function TweetCard({
   }
 
   return (
-    <li className="flex gap-4 border-b px-4 py-4 ">
+    <li className="flex gap-4 border-b px-4 py-4 rounded-full mt-4 text-white">
       <Link href={`/profile/${user.id}`}>
         <ProfileImage src={user.image} />
       </Link>
-      <div className=" flex flex-grow flex-col">
+      <div className=" flex flex-grow flex-col justify-center  ">
         <div className="flex gap-1">
           <Link
             href={`/profile/${user.id}`}
-            className="font-bold hover:underline"
+            className="font-bold hover:underline text-xl "
           >
             {" "}
             {user.name}{" "}
           </Link>
 
-          <span className="text-xs font-thin text-gray-500 ">
+          <span className="text-xs font-thin text-zinc-500 self-center px-4 ">
             {dateTimeFormatter.format(createdAt)}
           </span>
         </div>
-        <p className=" whitespace-pre-wrap"> {content}</p>
+        <p className=" whitespace-pre-wrap py-2 text-lg "> {content}</p>
         <HeartButton
           onClick={handleToggleLike}
           isLoading={toggleLike.isLoading}

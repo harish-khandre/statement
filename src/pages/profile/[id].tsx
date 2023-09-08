@@ -47,21 +47,30 @@ const ProfilePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
       <Head>
         <title>{`Twitter clone ${profile.name}`}</title>
       </Head>
-      <header className="sticky top-0 z-10 flex items-center border-b bg-white px-4 py-2">
+      <header className="sticky top-0 z-10 flex items-center border-b px-4 py-2 text-white">
         <Link href=".." className="mr-2">
           <IconHoverEffect>
             <VscArrowLeft className="h-6 w-6" />
           </IconHoverEffect>
         </Link>
         <ProfileImage src={profile.image} className="flex-shrink-0" />
-        <div className="ml-2 flex-grow">
-          <h1 className="text-lg font-bold">{profile.name}</h1>
-          <div className="text-gray-500">
-            {profile.tweetsCount} {""}
-            {getPlural(profile.tweetsCount, "Tweet", "Tweets")}
-            {profile.followersCount} {""}
-            {getPlural(profile.followersCount, "Follower", "Followers")} - {""}
-            {profile.followsCount} Following
+        <div className="ml-2 flex-grow text-white ">
+          <h1 className="text-lg font-bold self-center px-2 pt-2">{profile.name}</h1>
+          <div className="ml-1 mt-2 flex items-center justify-start gap-6 px-2 text-zinc-200">
+            <p className=" font-bold">
+              {profile.tweetsCount}{" "}
+              <span className="font-medium" >{getPlural(profile.tweetsCount, "Tweet", "Tweets")}</span>
+            </p>
+            <p className="font-bold" >
+              {profile.followersCount}{" "}
+              <span className="font-medium" >
+                {getPlural(profile.followersCount, "Follower", "Followers")}
+              </span>
+            </p>
+
+            <p className="font-bold" >
+              {profile.followsCount} <span className="font-medium" > Following</span>
+            </p>
           </div>
         </div>
         <FollowButton

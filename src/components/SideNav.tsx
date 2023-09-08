@@ -8,14 +8,14 @@ const SideNav = () => {
   const user = session.data?.user;
 
   return (
-    <nav className="sticky top-0 px-4 py-4">
+    <nav className="sticky top-0 px-4 py-4 text-white">
       <ul className="flex flex-col items-start gap-2 whitespace-nowrap">
         <li>
           <Link href="/">
             <IconHoverEffect>
               <span className="flex items-center gap-4 ">
                 <VscHome className="h-8 w-8" />
-                <span className="hidden text-lg md:inline">Home</span>
+                <span className="hidden text-xl md:inline">Home</span>
               </span>
             </IconHoverEffect>
           </Link>
@@ -26,7 +26,7 @@ const SideNav = () => {
               <IconHoverEffect>
                 <span className="flex items-center gap-4 ">
                   <VscAccount className="h-8 w-8" />
-                  <span className="hidden text-lg md:inline">Profile</span>
+                  <span className="hidden text-xl md:inline">Profile</span>
                 </span>
               </IconHoverEffect>
             </Link>
@@ -37,8 +37,8 @@ const SideNav = () => {
             <button onClick={() => void signIn()}>
               <IconHoverEffect>
                 <span className="flex items-center gap-4 ">
-                  <VscSignIn className="h-8 w-8 fill-sky-300 " />
-                  <span className="hidden text-lg text-sky-500 md:inline ">
+                  <VscSignIn className="h-8 w-8 fill-zinc-300 " />
+                  <span className="hidden text-xl text-zinc-500 md:inline ">
                     Log In
                   </span>
                 </span>

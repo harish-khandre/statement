@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 .button {
-  @apply mx-8 rounded-3xl  bg-sky-400 py-2 text-center text-lg font-medium tracking-wide text-sky-50 shadow-md shadow-orange-950 transition duration-500 hover:bg-sky-500 hover:shadow-sm hover:shadow-sky-950
+  @apply mx-8 rounded-3xl  bg-zinc-500 py-2 text-center text-lg font-medium tracking-wide text-zinc-50  shadow-gray-500 transition duration-200 hover:bg-zinc-600 hover:shadow-sm hover:shadow-gray-950
   active:shadow-inner
+}
+body{
+ @apply  bg-gradient-to-r from-zinc-900 to-zinc-950 
 }

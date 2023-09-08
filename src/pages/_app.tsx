@@ -16,12 +16,12 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <SessionProvider session={session}>
       <Head>
         <title>Sandesh </title>
-        <meta name="description" content="sandesh sandesh" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="sandesh" />
+
       </Head>
-      <div className="container  flex items-start sm:px-4 " >
+      <div className="container  flex items-start sm:px-4  " >
         <SideNav />
-        <div className="min-h-screen flex-grow border-x">
+        <div className="min-h-screen flex-grow  self-center ml-8">
 
       <Component {...pageProps} />
         </div>
