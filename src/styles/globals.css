@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .button {
-  @apply mx-8 rounded-3xl  bg-zinc-500 py-2 text-center text-lg font-medium tracking-wide text-zinc-50  shadow-gray-500 transition duration-200 hover:bg-zinc-600 hover:shadow-sm hover:shadow-gray-950
+  @apply mx-8 rounded-3xl  bg-transparent border-zinc-500 border-2 py-2 text-center text-lg font-medium tracking-wide text-white  shadow-gray-500 transition duration-200 hover:bg-zinc-800 hover:shadow-sm hover:shadow-gray-950
   active:shadow-inner
 }
 body{

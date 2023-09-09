@@ -14,14 +14,14 @@ const Home: NextPage = () => {
   return (
     <>
       <header className="sticky top-0 z-10 border-b pt-2">
-        <h1 className="mb-4 px-6 text-2xl font-bold text-white  ">Home</h1>
+        <h1 className="mb-4 px-6 text-2xl font-bold text-white font-serif ">STATEMENT</h1>
         {session.status === "authenticated" && (
           <div className="flex">
             {TABS.map((tab) => {
               return (
                 <button
                   key={tab}
-                  className={`flex-grow p-2 hover:rounded-full text-lg text-white hover:bg-zinc-400 focus-visible:bg-zinc-200 ${
+                  className={`flex-grow p-2 text-lg text-white hover:bg-zinc-800 focus-visible:bg-zinc-200 ${
                     tab === selectedTab
                       ? "border-b-4  border-b-zinc-500 font-bold"
                       : ""

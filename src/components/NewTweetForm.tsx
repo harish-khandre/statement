@@ -91,7 +91,7 @@ const Form = () => {
           ref={inputRef}
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}
-          className="flex-grow resize-none overflow-hidden rounded-full bg-zinc-500 p-4 text-lg text-white outline-0 my-2 "
+          className="flex-grow resize-none overflow-hidden rounded-full border-white border-2 bg-transparent p-4 text-lg text-white outline-0 my-2 self-center "
           placeholder="what's on your mind?"
           required
         />

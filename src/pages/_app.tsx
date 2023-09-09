@@ -15,8 +15,8 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <SessionProvider session={session}>
       <Head>
-        <title>Sandesh </title>
-        <meta name="description" content="sandesh" />
+        <title>Statement </title>
+        <meta name="description" content="Statement" />
 
       </Head>
       <div className="container  flex items-start sm:px-4  " >

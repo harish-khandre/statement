@@ -35,7 +35,7 @@ const InfiniteTweetList = ({
   if (isError) return <h1>Error...</h1>;
 
   if (tweets == null || tweets.length === 0) {
-    return <h1 className="text-center">No tweets brother.</h1>;
+    return <h1 className="text-center m-8 text-xl text-white ">No Statements brother.</h1>;
   }
   return (
     <ul>
