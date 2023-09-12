@@ -3,9 +3,28 @@
 @tailwind utilities;
 
 .button {
-  @apply mx-8 rounded-3xl  bg-transparent border-zinc-500 border-2 py-2 text-center text-lg font-medium tracking-wide text-white  shadow-gray-500 transition duration-200 hover:bg-zinc-800 hover:shadow-sm hover:shadow-gray-950
-  active:shadow-inner
+  @apply mx-8 rounded-3xl  border-2 border-zinc-500 bg-transparent py-2 text-center text-lg font-medium tracking-wide text-white  shadow-gray-500 transition duration-200 hover:bg-zinc-800 hover:shadow-sm hover:shadow-gray-950
+  active:shadow-inner;
 }
-body{
- @apply  bg-gradient-to-r from-zinc-900 to-zinc-950 
+body {
+  @apply bg-gradient-to-r from-zinc-900 to-zinc-950;
 }
+
+body {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */

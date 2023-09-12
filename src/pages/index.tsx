@@ -13,8 +13,8 @@ const Home: NextPage = () => {
   const session = useSession();
   return (
     <>
-      <header className="sticky top-0 z-10 border-b pt-2">
-        <h1 className="mb-4 px-6 text-2xl font-bold text-white font-serif ">STATEMENT</h1>
+      <header className=" top-0 z-10 border-b pt-2">
+        <h1 className="mb-4 px-6 text-3xl  text-white font-sans font-extrabold ">STATEMENT</h1>
         {session.status === "authenticated" && (
           <div className="flex">
             {TABS.map((tab) => {
